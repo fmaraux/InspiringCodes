@@ -1,7 +1,6 @@
-README.md
 # Exercice 1 : Define the requirements
 
-You were asked to participate in a project to deploy a new solution in a public cloud of your choice. This hands-on assignment is the first step in that process.
+**You were asked to participate in a project to deploy a new solution in a public cloud of your choice. This hands-on assignment is the first step in that process.**
 
 Use one of your existing projects, or something one of your customers is working on, or one of the sample projects described at the bottom of this document and document the requirements:
 
