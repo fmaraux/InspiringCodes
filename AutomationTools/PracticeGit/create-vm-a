@@ -1,3 +1,4 @@
+# add a comment to see change on git
 #!/bin/bash
 RG=`cat ~/.rg 2>/dev/null`
 RG=${RG:-Test}
