@@ -2,7 +2,7 @@
 
 variable "location" {
 	type = string
-	default = "switzerlandwest"
+	default = "switzerlandnorth"
 }
 
 variable "rg_name" {
