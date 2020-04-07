@@ -20,6 +20,22 @@ resource "azurerm_virtual_network" "tf_vnet" {
 	address_space = var.network_ip
 }
 
+###################
+#create route table
+###################
+
+resource "azurerm_route_table" "tf_RT" {
+	name = var.rt_name
+	location = var.location
+	resource_group_name = azurerm_resource_group.tf_rg.name
+
+	route {
+		name = var.route_name
+		address_prefix = "0.0.0.0/0"
+		next_hop_type =  "None"
+	}
+}
+
 ###############
 #create subnets
 ###############
@@ -37,22 +53,6 @@ resource "azurerm_subnet" "tf_private_subnet" {
 	virtual_network_name = azurerm_virtual_network.tf_vnet.name
 	address_prefix = var.private_sub_address
 	route_table_id = azurerm_route_table.tf_RT.id
-}
-
-###################
-#create route table
-###################
-
-resource "azurerm_route_table" "tf_RT" {
-	name = var.rt_name
-	location = var.location
-	resource_group_name = azurerm_resource_group.tf_rg.name
-
-	route {
-		name = var.route_name
-		address_prefix = "0.0.0.0/0"
-		next_hop_type =  "None"
-	}
 }
 
 #########################
