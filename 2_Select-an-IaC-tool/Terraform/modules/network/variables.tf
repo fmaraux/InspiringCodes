@@ -33,7 +33,7 @@ variable "public_sub_address" {
 
 variable "private_sub_name" {
 	type = string
-	default = "FM-Private"
+	default = "FM-Privee"
 }
 
 variable "private_sub_address" {
