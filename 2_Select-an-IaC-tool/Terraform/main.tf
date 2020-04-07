@@ -1,7 +1,6 @@
 # main module to deploy network and webVM
 
 provider "azurerm" {
-version = "=2.0.0"
 features {}
 }
 
